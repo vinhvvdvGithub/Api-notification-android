@@ -3,9 +3,6 @@ const axios = require("axios");
 
 const router = express.Router();
 
-router.get("/hello", (req, res) => {
-  res.json("hello dit me may");
-});
 
 router.post("/sendToAll", (req, res, next) => {
   //Notification content

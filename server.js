@@ -1,7 +1,7 @@
 const express = require("express");
 
 const app = express();
-
+const dotenv = require("dotenv");
 //routes
 const notification = require("./routes/api/notification");
 
@@ -10,6 +10,7 @@ app.use(express.json());
 app.get("/demo",function(req,res){
   res.json("hello world");
 })
+dotenv.config();
 //Mount routers
 app.use("/api/notification", notification);
 

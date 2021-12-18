@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"nodemon server",
+    "dev": "nodemon server",
+    "start": "node server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.24.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.2",
     "node-fecth": "^0.0.1-security",
     "nodemon": "^2.0.15"

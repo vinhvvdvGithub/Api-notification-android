@@ -3,7 +3,6 @@ const axios = require("axios");
 
 const router = express.Router();
 
-
 router.post("/sendToAll", (req, res, next) => {
   //Notification content
   let notification = {
@@ -22,8 +21,9 @@ router.post("/sendToAll", (req, res, next) => {
     method: "post",
     url: "https://fcm.googleapis.com/fcm/send",
     data: {
+      to: "/topics/Topic",
       notification: notification,
-      registration_ids: fcmToken,
+      // registration_ids: fcmToken,
     },
     headers: {
       //cloud messaging firebase token
